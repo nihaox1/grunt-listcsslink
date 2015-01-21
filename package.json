@@ -1,0 +1,22 @@
+{
+    "name"            : "grunt-listcsslink",
+    "description"     : "put link to page top",
+    "version"         : "0.0.2",
+    "homepage"        : "https://github.com/nihaox1/grunt-listcsslink",
+    "author"          : {
+        "name"  : "Bo.Cheng"
+    },
+    "repository": {
+        "type"  : "git",
+        "url"   : "https://github.com/nihaox1/grunt-listcsslink"
+    },
+    "bugs": {
+        "url": "https://github.com/nihaox1/grunt-listcsslink/issues"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    },
+    "dependencies": {
+        "grunt"         : "^0.4.0"
+    }
+}
