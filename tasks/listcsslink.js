@@ -33,16 +33,19 @@ Linkcss.fn = Linkcss.prototype;
 Linkcss.fn.getFileCode = function( file ){
     var _str    = grunt.file.read( file ).split( "</head>" ),
         _gap    = "==bo==",
-        _links  = _str[ 1 ].replace( /(<link[^\>]*>)/gi , _gap + "$1" + _gap ).split( _gap ),
+        _links,
         _bodyLinks = [];
-    for( var i = _links.length; i--; ){
-        if( i % 2 ){
-            _bodyLinks.push( _links[ i ] );
-            _links[ i ] = "";
+    if ( _str.length >= 2 ) {
+        _links  = _str[ 1 ].replace( /(<link[^\>]*>)/gi , _gap + "$1" + _gap ).split( _gap );
+        for( var i = _links.length; i--; ){
+            if( i % 2 ){
+                _bodyLinks.push( _links[ i ] );
+                _links[ i ] = "";
+            }
         }
+        _str[ 0 ] += _bodyLinks.join( "" ); 
+        _str[ 1 ] = _links.join( "" ); 
     }
-    _str[ 0 ] += _bodyLinks.join( "" ); 
-    _str[ 1 ] = _links.join( "" ); 
     return _str.join( "</head>" );
 }
 
