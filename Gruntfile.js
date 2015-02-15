@@ -4,9 +4,6 @@ module.exports = function (grunt) {
         listcsslink   : {
             fileOne     : {
                 src     : "src/"
-            } , 
-            fileTwo     : {
-                src     : "src/"
             }
         }
     });

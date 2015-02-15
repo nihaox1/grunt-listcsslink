@@ -1,7 +1,7 @@
 {
     "name"            : "grunt-listcsslink",
-    "description"     : "put link to page top",
-    "version"         : "0.0.4",
+    "description"     : "put link to page top & unique js & css & template ",
+    "version"         : "0.1.0",
     "homepage"        : "https://github.com/nihaox1/grunt-listcsslink",
     "author"          : {
         "name"  : "Bo.Cheng"
